@@ -1,0 +1,50 @@
+[
+    {
+        "receita": 1000.0,
+        "gastos": 7000.0,
+        "despesas": 300.0,
+        "lucro": -6300.0,
+        "percentual": -630.0
+    },
+    {
+        "lote": "17",
+        "fazenda": "aa",
+        "comprador": "ss",
+        "corretor": "ds",
+        "data_compra": "17 02",
+        "data_venda": "18 02",
+        "quantidade_bois": 22,
+        "peso_medio": 21.0,
+        "valor_arroba": 310.0,
+        "valor_compra": 290.0,
+        "valor_venda": 290.0,
+        "frete": 3330.0,
+        "medicamentos": 300.0,
+        "alimentacao": 400.0,
+        "comissao": 400.0,
+        "outras_despesas": 400.0,
+        "gastos": 4830.0,
+        "lucro": -4830.0,
+        "socios": [
+            {
+                "nome": "aa",
+                "aporte": 7000.0
+            }
+        ]
+    },
+    {
+        "lote": "Acara",
+        "fazenda": "Palestina",
+        "comprador": "Marcelo",
+        "valor_compra": 70000.0,
+        "valor_venda": 100000.0,
+        "gastos": 1000.0,
+        "lucro": 29000.0,
+        "socios": [
+            {
+                "nome": "Eduardo",
+                "aporte": 30000.0
+            }
+        ]
+    }
+]

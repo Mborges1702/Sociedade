@@ -1,0 +1,78 @@
+ARQUIVO_LOTES = "lotes.json"
+def carregar_lotes():
+    try:
+        with open(ARQUIVO_LOTES, "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
+    except FileNotFoundError:
+        return []
+
+
+def salvar_lotes():
+    with open(ARQUIVO_LOTES, "w", encoding="utf-8") as arquivo:
+        json.dump(
+            lotes,
+            arquivo,
+            indent=4,
+            ensure_ascii=False
+        )
+        socios = carregar_socios()
+        lotes = carregar_lotes()
+        lucro = venda - compra - despesas
+        lote = {
+    "lote": nome_lote,
+    "compra": compra,
+    "venda": venda,
+    "despesas": despesas,
+    "lucro": lucro,
+    "socio": nome_socio
+}
+
+lotes.append(lote)
+
+salvar_lotes()
+aba_historico = tk.Frame(notebook)
+
+notebook.add(
+    aba_historico,
+    text="Histórico"
+)tabela_lotes = ttk.Treeview(
+    aba_historico,
+    columns=(
+        "Lote",
+        "Compra",
+        "Venda",
+        "Lucro",
+        "Sócio"
+    ),
+    show="headings"
+)
+
+tabela_lotes.heading(
+    "Lote",
+    text="Lote"
+)
+
+tabela_lotes.heading(
+    "Compra",
+    text="Compra"
+)
+
+tabela_lotes.heading(
+    "Venda",
+    text="Venda"
+)
+
+tabela_lotes.heading(
+    "Lucro",
+    text="Lucro"
+)
+
+tabela_lotes.heading(
+    "Sócio",
+    text="Sócio"
+)
+
+tabela_lotes.pack(
+    fill="both",
+    expand=True
+)
